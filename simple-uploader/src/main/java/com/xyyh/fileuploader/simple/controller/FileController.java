@@ -19,6 +19,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+/**
+ * 最简单的文件上传和下载
+ * @author LiDong
+ *
+ */
 @RequestMapping("files")
 @RestController
 public class FileController {
