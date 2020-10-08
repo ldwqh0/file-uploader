@@ -28,7 +28,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 public class FileController {
 
-    private String path = "d:" + File.separator + "uploader";
+    private String path ="";// "d:" + File.separator + "uploader";
 
     @PostMapping
     public Map<String, Object> upload(@RequestParam("file") MultipartFile file)
@@ -36,7 +36,7 @@ public class FileController {
         // 获取原始文件名
         String filename = file.getOriginalFilename();
         // 构建保存目标
-        File target = new File(path + File.separator + filename);
+        File target = new File(filename);
         // 将文件转移到指定目录
         file.transferTo(target);
         // 构建响应
